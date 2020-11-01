@@ -1,6 +1,6 @@
 # MLB Name Translate
 
-Translate MLB player's English name into Japanse name.
+Translate MLB player's English name into Japanese name.
 
 ```python
 import mlbname
