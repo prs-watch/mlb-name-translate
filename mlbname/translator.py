@@ -74,6 +74,8 @@ def __get_names(do_update):
         df = pd.concat([df, __gen_name_df(url)])
     names = __trans_df_into_dict(df)
 
+    if not os.path.exists(PICKLE_PATH):
+        os.makedirs(os.path.dirname(PICKLE_PATH))
     with open(PICKLE_PATH, "wb") as f:
         print("Save dictionary..")
         pickle.dump(names, f)
