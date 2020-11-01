@@ -83,7 +83,7 @@ def __translate(target, do_update):
     """Translate name into Japanese.
 
     Args:
-        target (str): Name that you want to translate into Japaanese.
+        target (str): Name that you want to translate into Japanese.
         do_update (boolean): If True, English-Japansese dictionary will be updated.
 
     Returns:
