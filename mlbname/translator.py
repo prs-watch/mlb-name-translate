@@ -37,6 +37,7 @@ def __trans_df_into_dict(data):
     Returns:
         dict: Name dictionary.
     """
+    data["en_name"] = data["en_name"].str.upper()
     data["en_name_f"] = data["en_name"].str.split(" ", expand=True)[0]
     data["en_name_l"] = data["en_name"].str.split(" ", expand=True)[1]
     data["jp_name_f"] = data["jp_name"].str.split("・", expand=True)[0]
@@ -115,4 +116,4 @@ def translate(target, do_update):
     Returns:
         str: Translated name.
     """
-    return __translate(target, do_update)
+    return __translate(target.upper(), do_update)
