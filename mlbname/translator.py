@@ -101,10 +101,9 @@ def __translate(target, do_update):
         lastnames = names[2]
         target_first = target.split(" ")[0]
         target_last = target.split(" ")[1]
-        if (target_first in firstnames) and (target_last in lastnames):
-            return firstnames[target_first] + "・" + lastnames[target_last]
-        # If translation fails, return ordinal name.
-        return target
+        firstname = firstnames[target_first] if target_first in firstnames else target_first
+        lastname = lastnames[target_last] if target_last in lastnames else target_last
+        return firstname + "・" + lastname
 
 def translate(target, do_update):
     """Execute translating.

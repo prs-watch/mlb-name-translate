@@ -7,4 +7,4 @@ def test_mix_name():
     assert mlbname.translate("Max Verlander") == "マックス・バーランダー"
 
 def test_dummy_name():
-    assert mlbname.translate("AAA BBB") == "AAA BBB"
+    assert mlbname.translate("AAA BBB") == "AAA・BBB"
